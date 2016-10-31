@@ -33,14 +33,10 @@ var darkBrown  = 'hsla(13,19%,45%,1)'
 /*-----------------------------------------------------------------------------
   LOADING FONT
 -----------------------------------------------------------------------------*/
-var links = [
-  'https://fonts.googleapis.com/css?family=Sans-sherif',
-  'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'
-]
+var links = ['https://fonts.googleapis.com/css?family=Kaushan+Script']
 var font = yo`<link href=${links[0]} rel='stylesheet' type='text/css'>`
-var fontAwesome = yo`<link href=${links[1]} rel='stylesheet' type='text/css'>`
 document.head.appendChild(font)
-document.head.appendChild(fontAwesome)/*-----------------------------------------------------------------------------
+/*-----------------------------------------------------------------------------
 LOADING DATA
 -----------------------------------------------------------------------------*/
 var questions = [
@@ -81,7 +77,7 @@ function quizComponent () {
     .quiz {
       background-color: ${yellow};
       text-align: center;
-      font-family: 'Arial', cursive;
+      font-family: 'Kaushan Script', cursive;
       padding-bottom: 200px;
     }
     .welcome {
@@ -121,7 +117,7 @@ function quizComponent () {
     .results {
       background-color: ${white};
       text-align: center;
-      font-family: 'Arial', cursive;
+      font-family: 'Kaushan Script', cursive;
       padding-bottom: 200px;
     }
     .resultTitle{

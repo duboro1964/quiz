@@ -25,31 +25,28 @@ LOADING DATA
 -----------------------------------------------------------------------------*/
 var questions = [
 `
-Statement #1:
-How much do you like dogs?
+Stav #1:
+E-bicikli su sjajan izum!
 `,
 `
-Statement #2:
-I believe dogs should be allowed
-everywhere people are
+Stav #2:
+Njihove baterije kratko traju.
 `,
 `
-Statement #3:
-My friends say, my middle name should be "Meow".
+Stav #3:
+E-bicikli su skupi?
 `,
 `
-Statement #4:
-Eminem is definitely one of my
-favourite artists
+Stav #4:
+E-bicikli su idealno prevozno sredstvo u gradu.
 `,
 `
-Statement #5:
-I think I could spend all day just
-watching funny videows
+Stav #5:
+Bicikl je za rekreaciju i ne bi trebalo da ima dodatni pogon.
 `,
 `
-Statement #6:
-How much do you like cats?
+Stav #6:
+E-bicikli su idealni za osobe hendikepirane u kretanju.
 `
 ]
 var i               = 0
@@ -143,7 +140,7 @@ function quizComponent () {
     return yo`
       <div class="${css.quiz}">
         <div class="${css.welcome}">
-          Welcome to my quiz!
+          Dobrodošli na moj kviz!
         </div>
         <div class="${css.question}">
           ${question}
@@ -152,8 +149,8 @@ function quizComponent () {
           ${answerOptions.map(x=>yo`<div class="${css.answer}" onclick=${nextQuestion(x)}>${x}</div>`)}
         </div>
         <div class="${css.instruction}">
-          Choose how strongly do you agree with the statement<br>
-          (1 - don't agree at all, 6 - completely agree)
+          Kakvo je važe mišljenje<br>
+          (1 - ne slažem se uopšte, 6 - sasvim se slažem)
         </div>
            <div class="${css.back}" onclick=${back}>
            <img src="http://i.imgur.com/L6kXXEi.png" class="${css.backImg}">
@@ -187,10 +184,10 @@ function quizComponent () {
   return yo`
     <div class="${css.results}">
       <div class="${css.resultTitle}">
-        Compare your answers
+        Uporedite vaše odgovore
       </div>
         <div class="${css.showChart}" onclick=${function(){createChart(ctx, data)}}>
-        Click to see the chart
+        Kliknite da bi ste videli grafikon
       </div>
       ${ctx}
     </div>
@@ -226,12 +223,12 @@ function quizComponent () {
       }, myData)
       var data = {
         labels: [
-          "Statement #1", "Statement #2", "Statement #3",
-          "Statement #4", "Statement #5", "Statement #6"
+          "Stav #1", "Stav #2", "Stav #3",
+          "Stav #4", "Stav #5", "Stav #6"
         ],
         datasets: [
           {
-            label: "My statments",
+            label: "Moji stavovi",
             backgroundColor: "rgba(179,181,198,0.2)",
             borderColor: "rgba(179,181,198,1)",
             pointBackgroundColor: "rgba(179,181,198,1)",
@@ -241,7 +238,7 @@ function quizComponent () {
             data: myData
           },
           {
-            label: "Others statements",
+            label: "Vaši stavovi",
             backgroundColor: "rgba(255,99,132,0.2)",
             borderColor: "rgba(255,99,132,1)",
             pointBackgroundColor: "rgba(255,99,132,1)",
